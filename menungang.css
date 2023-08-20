@@ -1,0 +1,148 @@
+
+/* reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* nhìn hình thì cần xét backgroung thằng chứa nội dung chính */
+.main{
+    background-color: #eeeeee;
+}
+
+/* trong này sẽ có 2 phần là nav và cart */
+/* css cart */
+/* thằng lớn nhất chứa nguyên cái cart */
+/* nhìn vô hình thì mình phải css cái background border và height */
+.main-nav{
+    border: 1px solid #fff;
+    background-color: #fff;
+    height: 60px;
+}
+
+/* để mấy cái item nằm ngang thì mình phải đở thằng cha nó là flex */
+/* chỉnh chốn mất dấu chấm đi */
+.nav-list{
+    display: flex;
+    list-style: none;
+}
+
+/* css mấy cái item nè */
+/* vì một lý do nào đó t không biết là nó không ăn color với fontsize nên tao sẽ để nó cho thẻ a 
+ */
+/* ở đây mình chỉ căn giữa nó theo chiều dọc bằng cách cho nó height tốt nhát bằng main nav luôn cho nó đep
+  rồi mình cho line-height bằng cái height này thì nó sẽ tự căn giữa*/
+/* cho nó margin left ở nó cách bên trái ra cho nó đẹp */
+.nav-list .nav-item{
+    margin-left: 18px ;
+    line-height: 60px;
+    height: 100%;
+}
+/* tại đây mình sẽ chỉnh cái chữ Giao tận nơi */
+/* css color với fontsize */
+.nav-list .nav-item h1{
+    line-height: 60px;
+    color: #000;
+    font-size: 25px;
+    height: 100%;
+
+}
+/* css thẻ a nè */
+/* css màu nè fontsize nè */
+/* để có thể set width với height cho nó thì nó cần phải block */
+.nav-list .nav-item a{
+    color:#888885 ;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+/* cái css này làm cho nó có color màu đỏ với border-bottom nè */
+/* mình muốn thằng nào như này thì mình chỉ cần bỏ cái tên này vô class của thằng đó là được */
+.nav-item-strong{
+    color: red !important;
+    border-bottom: 3px solid red;
+}
+
+/* chỉnh ảnh nè */
+.nav-list .nav-item a img{
+    margin-top: 4px;
+    width: 50px;
+    height: 50px;
+}
+/* chỉnh icon nè */
+.nav-list .nav-item a i {
+    margin-left: 7px;
+    font-size: 12px;
+
+}
+
+
+/* css phần cart */
+/* áp dụng grid nè */
+/* cha cảu mấy cái product là thằng này nên mình sẽ cho thằng này là gird */
+
+.main-cart{
+    display: grid;
+    /* lệnh chia cột nè 5 cột với size 20% của trình duyệt */
+    grid-template-columns: repeat(5, 20%);
+    /* khoảng cách cột của hai item */
+    grid-column-gap: 12px;
+    grid-row-gap: 15px;
+    /* cho padding để đẹp thôi */
+    padding: 17px 14px;
+}
+.cart-product{
+    background-color: #fff;
+}
+/* hai khưa dưới ta chưa rõ mi có thể tìm cách khác nhan */
+.contain-img{
+    width: 100%;
+    height: 200px;
+}
+.cart-product-img{
+    width: 100%;
+    background-size: cover;
+    background-position: center;;
+
+}
+/* đừng quan tâm line heigh với height của thằng này nó là kỷ thuật tạo dấu ...  */
+/* mọi thứ ở dưới chỉ có css fontsize color padding hay margin thôi */
+.cart-product-heading{
+    padding: 6px 10px 2px;
+    font-size: 20px;
+    color: #000;
+    line-height: 22px;
+    height: 28px;
+}
+.dot-dot-dot{
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.cart-product-address{
+    font-size: 18px;
+    padding: 0 10px;
+    color: #b0abad;
+    margin-top: 5px;
+    line-height: 20px;
+    height: 22px;
+
+}
+.cart-product-type{
+    font-size: 18px;
+    
+    color: #a49368;
+    margin:22px 8px 50px;
+
+}
+.cart-product-type i{
+    color: red;
+}
+.cart-product-type span{
+    margin-left: 4px;
+}
+
